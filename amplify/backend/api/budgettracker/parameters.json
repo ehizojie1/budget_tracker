@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "budgettracker",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authbudgettracker5d2c058d",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
