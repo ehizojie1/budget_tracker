@@ -25,5 +25,32 @@
         }
       }
     }
+  },
+  "devj": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-budgettracker-devj-c831c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::058264501089:role/amplify-budgettracker-devj-c831c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::058264501089:role/amplify-budgettracker-devj-c831c-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-budgettracker-devj-c831c-deployment",
+      "UnauthRoleName": "amplify-budgettracker-devj-c831c-unauthRole",
+      "StackName": "amplify-budgettracker-devj-c831c",
+      "StackId": "arn:aws:cloudformation:us-east-1:058264501089:stack/amplify-budgettracker-devj-c831c/24350430-1625-11ef-ba93-12bb0d0df961",
+      "AmplifyAppId": "d2455xpmvba2tf"
+    },
+    "categories": {
+      "auth": {
+        "budgettracker5d2c058d": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2455xpmvba2tf",
+          "type": "manual"
+        }
+      },
+      "api": {
+        "budgettracker": {}
+      }
+    }
   }
 }

@@ -152,10 +152,30 @@
         }
       }
     },
+    "apibudgettracker": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-devj-c831c-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "budgettracker",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "AuthCognitoUserPoolId": {
+            "Fn::GetAtt": [
+              "authbudgettracker5d2c058d",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "S3DeploymentBucket": "amplify-budgettracker-devj-c831c-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/3723d24fbcf82d5c17bde7eaf083ce7631ff05a4",
+          "env": "devj"
+        }
+      }
+    },
     "authbudgettracker5d2c058d": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-dev-ec009-deployment/amplify-cfn-templates/auth/budgettracker5d2c058d-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-devj-c831c-deployment/amplify-cfn-templates/auth/budgettracker5d2c058d-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "budgettracker5d2c058d_identitypool_5d2c058d",
           "allowUnauthenticatedIdentities": false,
@@ -201,38 +221,18 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "dev"
-        }
-      }
-    },
-    "apibudgettracker": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-dev-ec009-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "Parameters": {
-          "AppSyncApiName": "budgettracker",
-          "DynamoDBBillingMode": "PAY_PER_REQUEST",
-          "DynamoDBEnableServerSideEncryption": false,
-          "AuthCognitoUserPoolId": {
-            "Fn::GetAtt": [
-              "authbudgettracker5d2c058d",
-              "Outputs.UserPoolId"
-            ]
-          },
-          "S3DeploymentBucket": "amplify-budgettracker-dev-ec009-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/3723d24fbcf82d5c17bde7eaf083ce7631ff05a4",
-          "env": "dev"
+          "env": "devj"
         }
       }
     },
     "hostingamplifyhosting": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-dev-ec009-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-budgettracker-devj-c831c-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "Parameters": {
-          "appId": "d1b4kygxtggphx",
+          "appId": "d2455xpmvba2tf",
           "type": "manual",
-          "env": "dev"
+          "env": "devj"
         }
       }
     },
